@@ -1,0 +1,44 @@
+@import './variables';
+
+// BREAKPOINTS
+@mixin smMinBreakPoint {
+  @media (min-width:#{$SCREEN-SM}) {
+    @content;
+  }
+}
+
+@mixin mdMaxBreakPoint {
+  @media (max-width: #{$SCREEN-MD}) {
+    @content;
+  }
+}
+
+@mixin lgMaxBreakPoint {
+  @media (min-width: #{$SCREEN-LG}) {
+    @content;
+  }
+}
+
+@mixin xlMinBreakPoint {
+  @media (min-width: #{$SCREEN-XL}) {
+    @content;
+  }
+}
+
+@mixin xxlMinBreakPoint {
+  @media (min-width: #{$SCREEN-2XL}) {
+    @content;
+  }
+}
+
+@mixin customMinBreakPoint($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin customMaxBreakPoint($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}

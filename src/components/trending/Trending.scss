@@ -1,0 +1,47 @@
+@import '../../stylesheets/variables';
+@import '../../stylesheets//mixins';
+@import '../../stylesheets//typography';
+
+.trending {
+  background-color: $BRAND-WHITE;
+  border-right: 1px solid $BRAND-WHITE;
+  border-radius: 24px;
+  box-shadow: $BOXSHADOW-CARD;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.trending__boxHeading {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+  justify-content: center;
+
+  .trending__Boxcircle {
+    width: 8px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: $TEXT-SECONDARY;
+    font-family: 'Inter';
+  }
+
+  p {
+    font-size: 14px;
+    font: $FONT-WEIGHT-BOLD;
+    line-height: 24px;
+    color: $TEXT-SECONDARY;
+  }
+}
+
+.trending__timeReaders {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  color: $TEXT-TERITIARY;
+  font-size: 14px;
+  font-family: 'Inter';
+  line-height: 24px;
+  font-weight: $FONT-WEIGHT-LIGHT;
+}

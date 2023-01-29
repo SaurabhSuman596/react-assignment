@@ -1,0 +1,100 @@
+@import '../../stylesheets/variables';
+@import '../../stylesheets//mixins';
+@import '../../stylesheets//typography';
+
+header {
+  background-color: $BRAND-WHITE;
+  box-shadow: $BOXSHADOW-LIGHT;
+  max-height: 72px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  .header__Container {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    max-width: 1024px;
+    margin: auto;
+    padding: 0 20px 0 20px;
+  }
+}
+
+.header__Right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  isolation: isolate;
+  list-style: none;
+
+  @include mdMaxBreakPoint {
+    display: none;
+  }
+
+  .header__navlink {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 72px;
+
+    a {
+      text-decoration: none;
+    }
+
+    p {
+      @include p_medium;
+      color: $TEXT-SECONDARY;
+      font-family: $FONT-FAMILY-POPPINS;
+    }
+
+    span {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $PRIMARY-COLOR;
+      border-radius: 4px 4px 0px 0px;
+      display: none;
+    }
+  }
+}
+
+.logo__image {
+  object-fit: contain;
+}
+
+.profile__Image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header__icon {
+  display: none;
+
+  @include mdMaxBreakPoint {
+    display: block;
+  }
+}
+
+.header__navlink:focus-within {
+  .header__a {
+    p {
+      @include p_heading;
+    }
+
+    .navlinks__focusedIndiacator {
+      display: inline-block;
+    }
+  }
+}

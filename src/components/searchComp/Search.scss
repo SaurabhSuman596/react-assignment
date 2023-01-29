@@ -1,0 +1,26 @@
+@import '../../stylesheets/variables';
+@import '../../stylesheets//mixins';
+@import '../../stylesheets//typography';
+
+.rightSide__searchContainer {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  padding: 3px 16px;
+  background-color: $SHADOW-COLOR;
+  max-width: 276px;
+  height: 40px;
+  border-radius: 8px;
+
+  input {
+    border: none;
+    background-color: $SHADOW-COLOR;
+    font-family: 'Inter';
+    color: $TEXT-SECONDARY;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

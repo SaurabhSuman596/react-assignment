@@ -1,0 +1,83 @@
+@import '../../stylesheets/variables';
+@import '../../stylesheets//mixins';
+@import '../../stylesheets//typography';
+@import '../../stylesheets/animations';
+
+.messages {
+  max-width: 276px;
+  background-color: $BRAND-WHITE;
+  border-right: 1px solid #fff;
+  box-shadow: $BOXSHADOW-CARD;
+  border-radius: $CARD-BORDER-RADIUS;
+  font-family: 'Inter';
+  padding: 16px;
+  column-gap: 8px;
+}
+
+.messages__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    font-family: 'Inter';
+    font-weight: $FONT-WEIGHT-MEDIUM;
+    color: $TEXT-PRIMARY;
+  }
+}
+
+.message__ReqNoti {
+  text-align: right;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: $FONT-WEIGHT-MEDIUM;
+  color: $TEXT-SECONDARY;
+  padding: 4px 16px;
+}
+
+.message__messageTab {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .message__messageContent {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 8px;
+
+    .message__Contentheader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: $FONT-WEIGHT-MEDIUM;
+      font-family: 'Poppins';
+      color: $TEXT-PRIMARY;
+    }
+  }
+}
+
+.message__message,
+.message__time {
+  color: $TEXT-SECONDARY;
+  font-size: 14px;
+  font-weight: $FONT-WEIGHT-LIGHT;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+.message__anim:active {
+  animation-name: slide;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  transition: all 0.5s linear;
+}

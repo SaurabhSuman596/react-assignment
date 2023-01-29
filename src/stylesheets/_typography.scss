@@ -1,0 +1,16 @@
+@import './mixins';
+@import './variables';
+
+@mixin p_medium {
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  font-weight: $FONT-WEIGHT-MEDIUM;
+}
+
+@mixin p_heading {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: $FONT-WEIGHT-BOLD;
+  line-height: 24px;
+}

@@ -1,0 +1,84 @@
+@import '../../stylesheets/variables';
+@import '../../stylesheets//mixins';
+@import '../../stylesheets//typography';
+
+.leftSideBar {
+  background-color: $BRAND-WHITE;
+  border-right: 1px solid $BRAND-WHITE;
+  box-shadow: $BOXSHADOW-CARD;
+  border-radius: $CARD-BORDER-RADIUS;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  max-height: 568px;
+  min-width: 276px;
+  @include customMaxBreakPoint(930px) {
+    display: none;
+  }
+}
+
+.leftSidebar__navLink {
+  padding: 16px 24px;
+  max-height: 56px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  cursor: pointer;
+
+  &:focus-within {
+    .leftNav__focus {
+      display: inline-block;
+    }
+  }
+
+  .leftNav__focus {
+    position: absolute;
+    width: 6px;
+    height: 56px;
+    display: inline-block;
+    background-color: $BRAND-PRIMARY;
+    border-radius: 0px 6px 6px 0px;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .leftbar__messageNoti {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $NOTIFICATION;
+    color: $BRAND-WHITE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.leftSidebar__navlinkSubMenu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 16px 0 0 48px;
+  position: relative;
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 32px;
+    align-self: stretch;
+    width: 2px;
+    height: 100%;
+    background-color: $BRAND-BORDER;
+  }
+}
+
+.leftSidebar__navLink:hover {
+  .leftNav__focus {
+    opacity: 1;
+  }
+  .LeftNavalink__para {
+    color: $BRAND-PRIMARY;
+  }
+}

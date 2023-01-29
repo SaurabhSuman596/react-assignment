@@ -1,0 +1,114 @@
+@import '../../stylesheets/variables';
+@import '../../stylesheets//mixins';
+@import '../../stylesheets//typography';
+
+.newsCard {
+  padding: 24px;
+  background-color: $BRAND-WHITE;
+  border: 1px solid #fcfcfc;
+  box-shadow: $BOXSHADOW-CARD;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.newsCard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .news__headerLeft {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+
+    img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .headerLeft__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+.headerInfo__para {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  font-size: 14px;
+  color: $TEXT-SECONDARY;
+  font-weight: 400;
+
+  .news__PerosnName {
+    font-weight: $FONT-WEIGHT-BOLD;
+  }
+
+  img {
+    width: 24px !important;
+    height: 25px !important;
+  }
+
+  .news__followPerosn {
+    color: $BRAND-PRIMARY;
+    font-weight: $FONT-WEIGHT-MEDIUM;
+  }
+}
+.news__username {
+  font-weight: $FONT-WEIGHT-LIGHT;
+}
+
+.newsCard__mainContent {
+  display: flex;
+  flex-direction: column;
+  flex: content;
+  row-gap: 16px;
+
+  p {
+    font-weight: $FONT-WEIGHT-LIGHT;
+    color: $BLACK;
+    font-size: 14px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .newsTotalLC {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .newsComentshareTotal {
+      display: flex;
+      align-items: center;
+      column-gap: 36px;
+    }
+  }
+}
+
+.newsCard__Footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  p {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    font-weight: $FONT-WEIGHT-LIGHT;
+    font-size: 14px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

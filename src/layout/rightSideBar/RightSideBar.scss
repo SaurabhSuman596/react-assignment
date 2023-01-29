@@ -1,0 +1,14 @@
+@import '../../stylesheets/variables';
+@import '../../stylesheets//mixins';
+@import '../../stylesheets//typography';
+
+.rightSideBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
+
+  @include customMaxBreakPoint(930px) {
+    display: none;
+  }
+}

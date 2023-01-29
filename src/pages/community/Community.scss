@@ -1,0 +1,16 @@
+@import '../../stylesheets/variables';
+@import '../../stylesheets//mixins';
+@import '../../stylesheets//typography';
+
+.community__Main {
+  display: flex;
+  justify-content: center;
+  padding: 30px 80px;
+  column-gap: 24px;
+  max-width: 1200px;
+  justify-content: center;
+
+  @include customMaxBreakPoint(350px) {
+    padding: 0 20px;
+  }
+}

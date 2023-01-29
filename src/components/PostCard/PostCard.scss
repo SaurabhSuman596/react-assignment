@@ -1,0 +1,70 @@
+@import '../../stylesheets/variables';
+@import '../../stylesheets//mixins';
+@import '../../stylesheets//typography';
+
+.postCard {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  background-color: $BRAND-WHITE;
+  box-shadow: $BOXSHADOW-CARD;
+  border-radius: 20px;
+  justify-content: space-between;
+}
+
+.postCard__topBox {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  column-gap: 8px;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  input {
+    padding: 10px 16px;
+    max-height: 40px;
+    background-color: $MAIN-BACKGROUND;
+    border: 0.5px solid $GRAY2;
+    border-radius: 23px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border: 0.5px solid $GRAY5;
+    }
+  }
+}
+
+.postCard__bottomBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .box__media {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+
+    p {
+      @include p_medium;
+      font-family: 'Inter';
+    }
+  }
+  .postCard__btn {
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $PRIMARY-COLOR;
+    border-radius: 23px;
+    border: none;
+    color: $BRAND-WHITE;
+    font-family: 'Inter';
+    font-weight: 500;
+    list-style: 15px;
+  }
+}
